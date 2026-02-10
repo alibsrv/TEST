@@ -1,0 +1,16 @@
+# Django junk
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+
+# Virtual Environment junk (The folders we see in your list)
+Lib/
+Scripts/
+Include/
+pyvenv.cfg
+
+# IDE junk
+.vscode/
+.idea/
