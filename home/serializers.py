@@ -10,7 +10,7 @@ class BookSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Book
-        fields = ['id', 'isbn', 'title', 'publication_year', 'genre', 'author']
+        fields = ['id', 'isbn', 'title', 'publication_year', 'genre', 'author', 'price', 'edition']
 
 class LoanSerializer(serializers.ModelSerializer):
     class Meta:

@@ -3,15 +3,12 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.utils import timezone
 from .models import Author, Book, BookCopy, Member, Loan
-from .serializers import BookSerializer, LoanSerializer # Assuming you create basic serializers
+from .serializers import BookSerializer, LoanSerializer 
 
-# Standard CRUD ViewSets (Easy implementation for managing data)
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     serializer_class = BookSerializer
 
-# --- CUSTOM LOGIC: Borrowing Scenario ---
-# Logic based on Sequence Diagram: Member requests -> System Checks -> System Updates
 
 @api_view(['POST'])
 def borrow_book(request):
