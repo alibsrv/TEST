@@ -14,7 +14,7 @@ class Book(models.Model):
     title = models.CharField(max_length=200)
     publication_year = models.IntegerField()
     genre = models.CharField(max_length=50)
-    author = models.ForeignKey(Author, on_delete=models.CASCADE, related_name='books')
+    authors = models.ManyToManyField(Author, related_name='books')
     edition = models.CharField(max_length=50, null=True, blank=True)
     price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
 
